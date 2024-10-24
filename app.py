@@ -69,6 +69,18 @@ def show_current_orders():
                            orders=datas
                            )
 
+@app.route('/mario_register', methods = ['POST'])
+def register_order_from_mario():
+    data = request.get_json()
+    order_time = data['date and time']
+    order_number = data['order number']
+    order_details = data['order']
+
+    newOrder = (order_time,order_number,order_details)
+    datas.append(newOrder)
+
+    return "OK"
+
 
 if __name__ == '__main__':  
     app.run(debug=True)
