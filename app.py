@@ -9,7 +9,9 @@ order_number = 101
 
 def generate_order(clock,order_number,order_details):
     global data
+    # all the orders
     datas.append((clock,order_number,order_details)) 
+    # view the current selection
     data = [clock, order_number, order_details]
 
 @app.route('/')
