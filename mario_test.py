@@ -1,7 +1,6 @@
 import requests
 import json
 from datetime import datetime
-import time
 
 order = ()
 appended_order = []
@@ -47,10 +46,8 @@ def generate_order(order_number):
 
     if user_input == "y":
         print("Your order is confirmed")
-        time.sleep(3)
     else :
         print("Order is cancelled! ")
-        time.sleep(3)
         orders = {}
     
     return orders
@@ -58,17 +55,17 @@ def generate_order(order_number):
 
 
 # main program
-print("\n\n*** Mario ***\n")
-
-
-print("1.Pizza Margherita")
-print("2.Pizza Pepperoni")
-print("3.Pizza Four Cheese")
-print("4.Pizza BBQ Chicken")
-print("5.Pizza Vegetarian")
-print("6.Pizza Meat Lovers")
 
 while True:
+
+    print("\n\n*** Mario ***\n")
+
+    print("1.Pizza Margherita")
+    print("2.Pizza Pepperoni")
+    print("3.Pizza Four Cheese")
+    print("4.Pizza BBQ Chicken")
+    print("5.Pizza Vegetarian")
+    print("6.Pizza Meat Lovers")
 
     orders = generate_order(order_number)
     order_number+=1
